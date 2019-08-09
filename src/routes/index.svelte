@@ -32,11 +32,16 @@
 	}
 </style>
 
+<script>
+	let didClick = false;
+</script>
+
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>{didClick ? 'Even more success' : 'Great success!'}</h1>
+<button on:click={() => (didClick = true)}>click for more success</button>
 
 <figure>
 	<img alt='Borat' src='great-success.png'>
